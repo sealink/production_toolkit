@@ -10,6 +10,5 @@ TOOL_DEFAULTS = {
 
 TOOL_DEFAULTS.each_pair do |tool_name, default|
   tool = ENV.fetch(tool_name.to_s.upcase, default)
-  puts "requriing for #{tool_name} - found #{tool}"
   require tool unless tool == 'off'
 end

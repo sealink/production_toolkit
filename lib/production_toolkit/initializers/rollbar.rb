@@ -23,12 +23,12 @@ class RollbarConfigurator
   end
 
   def configure
-    notify_missing_configuration! unless configuration.present?
+    notify_missing_configuration! unless @configuration.present?
     configure_rollbar
   end
 
   def rollbar_config
-    @rollbar_config ||= RollbarConfig.new(configuration.symbolize_keys)
+    @rollbar_config ||= RollbarConfig.new(@configuration.symbolize_keys)
   end
 
   private
