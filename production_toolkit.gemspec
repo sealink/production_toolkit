@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pansophy', '~> 0.5'
   spec.add_development_dependency 'le', '~> 2.6'
   spec.add_development_dependency 'newrelic_rpm', '~> 3.9'
+  spec.add_development_dependency 'lograge', '~> 0.3.6'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
