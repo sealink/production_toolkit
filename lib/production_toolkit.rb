@@ -5,7 +5,8 @@ TOOL_DEFAULTS = {
   error_reporting:     'rollbar',
   log_files:           'le',
   performance_monitor: 'newrelic_rpm',
-  server:              'unicorn'
+  server:              'unicorn',
+  log_format:          'lograge'
 }
 
 TOOL_DEFAULTS.each_pair do |tool_name, default|

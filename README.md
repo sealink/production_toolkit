@@ -23,6 +23,8 @@ gem 'pansophy', '~> 0.3'
 gem 'unicorn'
 gem 'newrelic_rpm'
 gem 'le'
+gem 'rollbar', '~> 2.4.0'
+gem 'lograge', '~> 0.3.6'
 gem 'rollbar', '~> 2.9.0'
 
 # SYNOPSIS
