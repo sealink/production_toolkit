@@ -33,3 +33,13 @@ require 'production_toolkit'
 
 For examples on most usage see the tests in the spec directory.
 As these contain many basic examples with expected output.
+
+## Log level
+
+When using the 'le' gem, production_toolkit will set the log level to the one defined in the application's production.rb (for version >= 0.1.3).
+
+    ```ruby
+    config.log_level = :warn
+    ```
+
+If a log level is not defined by the app, the logger will default to 'info' level logging.
