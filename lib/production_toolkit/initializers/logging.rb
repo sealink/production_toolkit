@@ -2,6 +2,7 @@ if defined?(Rails)
   if Rails.env.production?
     require 'le'
     log_entries_key = Rails.application.secrets.log_entries_key
-    Rails.logger = Le.new(log_entries_key, ssl: true, tag: true)
+    log_level = Rails.application.config.log_level || :info
+    Rails.logger = Le.new(log_entries_key, ssl: true, tag: true, log_level: log_level)
   end
 end
