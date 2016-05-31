@@ -1,11 +1,12 @@
 require 'rollbar_configuator'
 
-config = if defined?(Rails)
-           Rails.application.secrets.rollbar
-         end
-if config
-  configurator = RollbarConfigurator.new(config)
-  configurator.configure
-end
+if defined?(Rails)
+  config = Rails.application.secrets.rollbar
 
-Rails.application.config.rollbar = configurator.rollbar_config if defined?(Rails)
+  if config
+    configurator = RollbarConfigurator.new(config)
+    configurator.configure
+
+    Rails.application.config.rollbar = configurator.rollbar_config
+  end
+end
