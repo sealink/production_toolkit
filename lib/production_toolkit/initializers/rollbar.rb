@@ -1,60 +1,12 @@
-class RollbarConfig
-  attr_reader :server_token, :client_token, :environment
+require 'rollbar_configuator'
 
-  def initialize(config)
-    @enabled = config.fetch(:enabled, false)
-    if enabled?
-      @server_token = config.fetch(:server_token)
-      @client_token = config.fetch(:client_token)
-      @environment  = config.fetch(:environment)
-    end
-  end
+if defined?(Rails)
+  config = Rails.application.secrets.rollbar
 
-  def enabled?
-    @enabled
+  if config
+    configurator = RollbarConfigurator.new(config)
+    configurator.configure
+
+    Rails.application.config.rollbar = configurator.rollbar_config
   end
 end
-
-class RollbarConfigurator
-  ERROR_MESSAGE = 'rollbar not defined in secrets.yml'
-
-  def initialize(configuration)
-    @configuration = configuration
-  end
-
-  def configure
-    notify_missing_configuration! unless @configuration.present?
-    configure_rollbar
-  end
-
-  def rollbar_config
-    @rollbar_config ||= RollbarConfig.new(@configuration.symbolize_keys)
-  end
-
-  private
-
-  def configure_rollbar
-    return unless rollbar_config.enabled?
-
-    require 'rollbar'
-
-    ::Rollbar.configure do |config|
-      config.enabled      = true
-      config.access_token = rollbar_config.server_token
-      config.environment  = rollbar_config.environment
-      config.exception_level_filters.merge!('ActionController::RoutingError' => 'ignore')
-    end
-  end
-
-  def notify_missing_configuration!
-    fail ERROR_MESSAGE
-  end
-end
-
-config = if defined?(Rails)
-           Rails.application.secrets.rollbar
-         end
-configurator = RollbarConfigurator.new(config)
-configurator.configure
-
-Rails.application.config.rollbar = configurator.rollbar_config if defined?(Rails)
