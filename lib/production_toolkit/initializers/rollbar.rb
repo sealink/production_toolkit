@@ -1,4 +1,4 @@
-require 'rollbar_configurator'
+require 'production_toolkit/rollbar_configurator'
 
 if defined?(Rails)
   config = Rails.application.secrets.rollbar
