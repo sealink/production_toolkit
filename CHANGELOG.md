@@ -1,3 +1,8 @@
+## Production Toolkit 0.1.5 ##
+
+* Fix require in 0.1.4
+* Fix log level
+
 ## Production Toolkit 0.1.4 ##
 
 * Fix typo in 0.1.3
