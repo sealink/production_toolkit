@@ -1,3 +1,7 @@
+## Production Toolkit 0.1.4 ##
+
+* Fix typo in 0.1.3
+
 ## Production Toolkit 0.1.3 ##
 
 * Ignore ActionController::RoutingError in rollbar
