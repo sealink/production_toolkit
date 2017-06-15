@@ -6,7 +6,7 @@ TOOL_DEFAULTS = {
   log_files:           'le',
   performance_monitor: 'newrelic_rpm',
   server:              'unicorn',
-  log_format:          'lograge'
+  log_format:          'production_toolkit/lograge'
 }
 
 TOOL_DEFAULTS.each_pair do |tool_name, default|
