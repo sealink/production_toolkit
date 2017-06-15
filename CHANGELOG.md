@@ -1,3 +1,7 @@
+## Production Toolkit 0.1.6 ##
+
+* Fix lograge railtie
+
 ## Production Toolkit 0.1.5 ##
 
 * Fix require in 0.1.4
