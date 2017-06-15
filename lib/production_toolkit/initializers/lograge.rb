@@ -4,8 +4,6 @@ if defined?(Rails)
     Rails.application.class.configure do
       config.lograge.enabled = true
 
-      # We want JSON
-      config.lograge.formatter = Lograge::Formatters::Json.new
 
       # Optionally add params hash, and timestamp
       config.lograge.custom_options = lambda do |event|
