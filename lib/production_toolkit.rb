@@ -3,7 +3,6 @@ require 'production_toolkit/railtie' if defined?(Rails)
 TOOL_DEFAULTS = {
   config_fetcher:      'pansophy',
   error_reporting:     'rollbar',
-  log_files:           'le',
   performance_monitor: 'newrelic_rpm',
   server:              'unicorn',
   log_format:          'production_toolkit/lograge'
