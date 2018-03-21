@@ -1,3 +1,7 @@
+## Unreleased
+
+* [TT-3794] Remove newrelic_rpm as the default performance_monitor
+
 ## Production Toolkit 0.1.6 ##
 
 * Fix lograge railtie

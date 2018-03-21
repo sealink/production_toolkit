@@ -4,7 +4,7 @@ TOOL_DEFAULTS = {
   config_fetcher:      'pansophy',
   error_reporting:     'rollbar',
   log_files:           'le',
-  performance_monitor: 'newrelic_rpm',
+  performance_monitor: 'off',
   server:              'unicorn',
   log_format:          'production_toolkit/lograge'
 }

@@ -19,13 +19,14 @@ gem 'production_toolkit'
 
 Also add the relevant dependencies of your project:
 
-gem 'pansophy', '~> 0.3'
-gem 'unicorn'
-gem 'newrelic_rpm'
-gem 'le'
-gem 'rollbar', '~> 2.4.0'
-gem 'lograge', '~> 0.3.6'
-gem 'rollbar', '~> 2.9.0'
+  ```ruby
+  gem 'pansophy', '~> 0.3'
+  gem 'unicorn'
+  gem 'le'
+  gem 'rollbar', '~> 2.4.0'
+  gem 'lograge', '~> 0.3.6'
+  gem 'rollbar', '~> 2.9.0'
+  ```
 
 # SYNOPSIS
 
@@ -38,8 +39,8 @@ As these contain many basic examples with expected output.
 
 When using the 'le' gem, production_toolkit will set the log level to the one defined in the application's production.rb (for version >= 0.1.3).
 
-    ```ruby
-    config.log_level = :warn
-    ```
+  ```ruby
+  config.log_level = :warn
+  ```
 
 If a log level is not defined by the app, the logger will default to 'info' level logging.
