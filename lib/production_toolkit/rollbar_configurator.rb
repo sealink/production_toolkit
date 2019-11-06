@@ -45,6 +45,8 @@ class RollbarConfigurator
       config.access_token = rollbar_config.server_token
       config.environment  = rollbar_config.environment
       config.exception_level_filters.merge!('ActionController::RoutingError' => 'ignore')
+      config.scrub_fields |= [:access_token, :client_token, :api_key]
+      config.scrub_headers |= ["X-API-KEY", :access_token]
     end
   end
 
