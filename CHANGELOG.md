@@ -1,3 +1,7 @@
+## Unreleased ##
+
+* [TT-6291] Filter additional headers / params from rollbar
+
 ## Production Toolkit 0.2.0 ##
 
 * [TT-3794] Remove newrelic_rpm as the default performance_monitor
