@@ -1,4 +1,4 @@
-## Unreleased ##
+## Production Toolkit 0.3.0 ##
 
 * [TT-6291] Filter additional headers / params from rollbar
 
