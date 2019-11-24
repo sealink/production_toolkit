@@ -3,7 +3,7 @@ if defined?(Rails) && Rails.env.production?
     config.lograge.enabled = true
 
     # Disable sprockets asset logging
-    config.assets.logger = false
+    config.assets.logger = false if config.respond_to?(:assets)
 
     # Optionally add params hash, and timestamp
     config.lograge.custom_options = lambda do |event|
