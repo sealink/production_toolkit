@@ -1,4 +1,4 @@
-## Unreleased **
+## Production Toolkit 0.3.1 ##
 
 * [TT-6387] Fix initalisation error when sprockets is not installed
 
