@@ -1,3 +1,7 @@
+## Unreleased **
+
+* [TT-6387] Fix initalisation error when sprockets is not installed
+
 ## Production Toolkit 0.3.0 ##
 
 * [TT-6291] Filter additional headers / params from rollbar
