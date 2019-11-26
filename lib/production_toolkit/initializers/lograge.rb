@@ -1,6 +1,7 @@
 if defined?(Rails) && Rails.env.production?
   Rails.application.class.configure do
     config.lograge.enabled = true
+    config.lograge.ignore_actions = ['status#index']
 
     # Disable sprockets asset logging
     config.assets.logger = false if config.respond_to?(:assets)
