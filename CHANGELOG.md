@@ -1,3 +1,8 @@
+## Production Toolkit Unreleased ##
+
+* [TT-6412] Ignore logging health checks
+* [TT-6412] Add additional headers to be scrubed from rollbar
+
 ## Production Toolkit 0.3.1 ##
 
 * [TT-6387] Fix initalisation error when sprockets is not installed
