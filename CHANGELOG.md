@@ -1,4 +1,4 @@
-## Production Toolkit Unreleased ##
+## Production Toolkit 0.3.2 ##
 
 * [TT-6412] Ignore logging health checks
 * [TT-6412] Add additional headers to be scrubed from rollbar
